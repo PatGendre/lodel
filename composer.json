@@ -18,6 +18,7 @@
                 "pear/mail" : "^1.4",
                 "pear/mail_mime" : "^1.10",
                 "ezyang/htmlpurifier" : "^4.9",
-                "nikic/fast-route": "^1.2"
+                "nikic/fast-route": "^1.2",
+                "robmorgan/phinx": "^0.8.1"
         }
 }
