@@ -19,6 +19,10 @@
                 "pear/mail_mime" : "^1.10",
                 "ezyang/htmlpurifier" : "^4.9",
                 "nikic/fast-route": "^1.2",
-                "robmorgan/phinx": "^0.8.1"
+                "robmorgan/phinx": "^0.8.1",
+                "phing/phing": "^2.16"
+        },
+        "require-dev": {
+                "phpunit/phpunit": "^6.3"
         }
 }
