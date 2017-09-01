@@ -7,10 +7,12 @@ adduser -D -s /bin/false -u $USER_ID user
 
 cp /code/lodelconfig-default.php /code/lodelconfig.php
 sed -i "s|exit()|// exit()|g" /code/lodelconfig.php
-sed -i "s/^.*database.*$/\$cfg['database'] = '$MYSQL_DATABASE';/g" /code/lodelconfig.php
-sed -i "s/^.*dbusername'].*$/\$cfg['dbusername'] = '$MYSQL_USER';/g" /code/lodelconfig.php
-sed -i "s/^.*dbpasswd.*$/\$cfg['dbpasswd'] = '$MYSQL_PASSWORD';/g" /code/lodelconfig.php
-sed -i "s/^.*dbhost.*$/\$cfg['dbhost'] = '172.30.0.30';/g" /code/lodelconfig.php
+sed -i "s/^\$cfg\['database'\] = '';$/\$cfg['database'] = '$MYSQL_DATABASE';/g" /code/lodelconfig.php
+sed -i "s/^\$cfg\['dbusername'\] = '';$/\$cfg['dbusername'] = '$MYSQL_USER';/g" /code/lodelconfig.php
+sed -i "s/^\$cfg\['dbpasswd.*$/\$cfg['dbpasswd'] = '$MYSQL_PASSWORD';/g" /code/lodelconfig.php
+sed -i "s/^\$cfg\['dbhost.*$/\$cfg['dbhost'] = '172.30.0.30';/g" /code/lodelconfig.php
+sed -i "s/^\$cfg\['debugMode.*$/\$cfg['debugMode'] = $DEBUG_MODE;/g" /code/lodelconfig.php
+
 chmod 664 /code/lodelconfig.php
 chown $USER_ID:$USER_ID /code/lodelconfig.php
 
